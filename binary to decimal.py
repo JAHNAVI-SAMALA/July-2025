@@ -1,0 +1,9 @@
+bin = input()
+p2 = 1
+res = 0
+i=1
+for i in bin[::-1]:
+    if i == "1":
+        res += p2
+    p2 = p2*2
+print(res)

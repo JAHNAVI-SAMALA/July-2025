@@ -1,0 +1,15 @@
+""" total no.of subsets :1<< len(arr)"""
+def generate(arr):
+     n =len(arr)
+     totalSubsets = (1<<n)
+     ans = []
+     for val in range(totalSubsets):
+        temp = []
+        for i in range(n):
+            if val&(1<<i):
+                temp.append(arr[i])
+        ans.append(temp)
+     return ans
+arr =list(map( int,input().split()))
+print(generate(arr))
+
