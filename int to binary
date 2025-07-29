@@ -1,0 +1,7 @@
+n= int(input())
+binStr = ""
+while(n!=0):
+    rem = n%2
+    binStr += str(rem)
+    n = n//2
+print(binStr[::-1])
