@@ -1,0 +1,8 @@
+from math import *
+num1,den1,num2,den2 = map(int,input().split())
+numerator = num1*den2 + num2 * den1
+denominator = den1*den2
+d = gcd(numerator,denominator)
+numerator //= d
+denominator //= d
+print(f"{numerator}/{denominator}")
