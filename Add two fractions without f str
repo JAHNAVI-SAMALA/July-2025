@@ -1,0 +1,20 @@
+#add two fractions
+import math
+num1,den1,num2,den2 = map(int,input().split())
+if den1 == den2:
+    num = num1+num2
+    den = den1 = den2
+    gcd = math.gcd(num,den)
+    if num%den == 0 or den % num == 0:
+        print(str(num//gcd)+'/'+str(den//gcd))
+    else:
+        print(str(num)+ '/' +str(den))
+    
+else:
+    num = (num1 *den2) +(num2*den1)
+    den = den1*den2
+    gcd = math.gcd(num,den)
+    if num%den == 0 or den % num == 0:
+        print(str(num//gcd)+'/'+str(den//gcd))
+    else:
+        print(str(num)+ '/ ' +str(den))
